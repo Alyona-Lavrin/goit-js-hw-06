@@ -1,10 +1,12 @@
-let input = document.getElementById('name-input');
-let span = document.getElementById('name-output');
+const myInput = document.querySelector('#name-input' );
+const mySpan = document.querySelector('#name-output');
 
-input.addEventListener("keyup", (event) => {
-    if(event.currentTarget.value !== '') {
-        span.innerText = event.currentTarget.value;
-    } else {
-        span.innerText = "Anonymous";
+myInput.addEventListener('input', newInput);
+
+function newInput(e) {
+    mySpan.textContent = e.currentTarget.value;
+
+    if (e.currentTarget.value === "") {
+        mySpan.textContent = 'Anonymous'
     }
-})
+}
