@@ -6,12 +6,14 @@ buttons.forEach(button => {
   button.addEventListener("click", () => {
     const action = button.dataset.action
     if(action === 'decrement') {
-        if (counterValue > 0) {
+        if (counterValue > 0)
+           (counterValue <= 0)
+         {
             counterValue --;
         }
     } else {
         counterValue ++;
-    }
+      }
     document.getElementById('value').innerText = counterValue;
   })
 })

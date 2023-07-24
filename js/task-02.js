@@ -6,12 +6,15 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const listEl = document.querySelector("#ingredients");
+const items = markup(ingredients);
 
-let parent = document.getElementById('ingredients');
-
-ingredients.forEach(element => {
-	let li = document.createElement('li');
-	li.textContent = element;
-	parent.appendChild(li);
-  li.className = "item";
-})
+function markup(element) {
+  return element.map(item => {
+    return `
+    <li class="item"> ${item}</li>
+    `;
+  })
+    .join(``);
+}
+listEl.insertAdjacentHTML("beforeend", items)
