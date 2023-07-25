@@ -8,8 +8,8 @@ const ingredients = [
 ];
 const parent = document.querySelector("#ingredients");
 
-function markup(element) {
-  return element.map(item => {
+function markup(elements) {
+  return elements.map(item => {
     let li = document.createElement('li');
     li.textContent = item;
     parent.appendChild(li);
