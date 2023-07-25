@@ -9,7 +9,7 @@ const ingredients = [
 const parent = document.querySelector("#ingredients");
 
 function markup(elements) {
-  return elements.map(item => {
+   elements.map(item => {
     let li = document.createElement('li');
     li.textContent = item;
     parent.appendChild(li);
